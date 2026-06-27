@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "mrkartoshki.blackmesa.mixin",
+	"mixins": [
+		"OverworldBiomeBuilderMixin"
+	],
+	"client": [],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

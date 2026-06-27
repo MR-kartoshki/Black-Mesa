@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "black-mesa",
+	"version": "${version}",
+	"name": "Black Mesa",
+	"description": "Adds the Black Mesa biome: a Mesa whose plain and red terracotta is replaced with black terracotta.",
+	"authors": [
+		"mrkartoshki"
+	],
+	"license": "MIT",
+	"environment": "*",
+	"accessWidener": "black-mesa.accesswidener",
+	"mixins": [
+		"black-mesa.mixins.json"
+	],
+	"entrypoints": {
+		"main": [
+			"mrkartoshki.blackmesa.BlackMesa"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": ">=26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
