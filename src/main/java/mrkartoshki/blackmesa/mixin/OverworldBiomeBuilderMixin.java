@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class OverworldBiomeBuilderMixin {
 	@Inject(method = "pickBadlandsBiome", at = @At("HEAD"), cancellable = true)
 	private void blackmesa$blackMesa(int humidityIndex, Climate.Parameter weirdness, CallbackInfoReturnable<ResourceKey<Biome>> cir) {
-		if (humidityIndex == 0 && weirdness.max() < 0L) {
+		if (humidityIndex == 0 && weirdness.max() < -0.5f) {
 			cir.setReturnValue(ModBiomes.BLACK_MESA);
 		}
 	}

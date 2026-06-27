@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.SurfaceSystem;
+import org.jspecify.annotations.NonNull;
 
 /**
  * A copy of vanilla's {@code minecraft:bandlands} surface rule, adjusted so that only the plain and
@@ -32,7 +33,7 @@ public enum BlackBandlandsRuleSource implements SurfaceRules.RuleSource {
 		Registry.register(BuiltInRegistries.MATERIAL_RULE, BlackMesa.id("black_bandlands"), CODEC);
 	}
 
-	@Override
+	@Override @NonNull
 	public MapCodec<? extends SurfaceRules.RuleSource> codec() {
 		return CODEC;
 	}
